@@ -1,0 +1,118 @@
+html, body {
+    background-color: #2f2f2f;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}
+
+p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5em;
+    max-width: 600px;
+}
+
+#get-started {
+    padding: 0.75em 1.5em;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #ff004c;
+    background-size: 200%;
+    background-position: 0%;
+    transition: background-position 0.5s ease, transform 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ff2c6c;
+}
+
+#get-started:hover {
+    background-position: 100%;
+    transform: scale(1.05);
+}
+
+#new-note {
+    background-color: #ff004c;
+    display: block;
+    border-radius: 50%;
+    border: 3px solid #dd0042;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+
+.note {
+    background-color: #fffb91;
+    width: 200px;
+    min-height: 150px;
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid #f3e442;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    font-family: sans-serif;
+    font-size: 16px;
+    cursor: text;
+    outline: none;
+    color: #000;
+}
+
+.note:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.note h3 {
+  margin-top: 0;
+}
+
+.note:focus {
+    box-shadow: 0 0 0 2px #ffda00;
+    border: none;
+}
+
+.note p {
+  margin-bottom: 0;
+}
+
+#notif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fffb91;
+    color: #000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+#close-notif {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
